@@ -65,15 +65,21 @@ img {
     align-items: center;
     z-index: 5;
     overflow: hidden;
-    transition: 1s;
+    transition: 0.7s;
     opacity: 0;
     visibility: hidden;
 }
 
 .popup.active{
     visibility: visible;
-    transform: scale(1);
+    transform: translate(-50%, -50%) scale(1);
     opacity: 1;
+}
+
+.popup__image {
+    width: 85%;
+    height: 75%;
+    object-fit: contain;
 }
 
 .close-btn {
@@ -109,8 +115,4 @@ img {
 .right-arrow {
     right: 10px;
 }
-.popup-image {
-    width: 85%;
-    height: 75%;
-    object-fit: contain;
-}
+
