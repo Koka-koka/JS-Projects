@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Image Popup Gallery</title>
 </head>
 <body>
 
+    <!-- Gallery Section -->
     <section class="gallery">
         <div class="container">
             <h1 class="gallery__title">Image Popup Gallery</h1>
+            <!-- Gallery Image Grid -->
             <div class="gallery__wrapper">
                 <div class="gallery__image">
                     <img src="images/img1.jpg" alt="nature" class="image">
@@ -31,6 +34,16 @@
                     <img src="images/img6.jpg" alt="nature" class="image">
                 </div>
             </div>
+        </div>
+
+        <!-- Popup -->
+        <div class="gallery__popup popup">
+            <!-- Popup Main Image -->
+            <img src="images/img1.jpg" class="popup-image" alt="popup">
+            <span class="close-btn"><i class="fa-solid fa-x"></i></span>
+            <!-- Arrows -->
+            <button class="popup__arrow left-arrow"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="popup__arrow right-arrow"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </section>
 

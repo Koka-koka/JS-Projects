@@ -1,1 +1,1 @@
-Custom UI Elements with Vanilla HTML, CSS, JavaScript From Scratch.
+Custom UI Projects with Vanilla HTML, CSS, JavaScript From Scratch.
