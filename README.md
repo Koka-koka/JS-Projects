@@ -1,1 +1,1 @@
-Custom UI Projects with Vanilla HTML, CSS, JavaScript From Scratch.
+Custom FrontEnd Projects with HTML, CSS and JavaScript From Scratch.
