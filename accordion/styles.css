@@ -18,3 +18,71 @@ img {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+/* Accordion Section */
+.accordion {
+  background-color: aliceblue;
+  height: 100vh;
+  padding: 20px;
+}
+.accordion__heading {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.accordion__text {
+  max-width: 60rem;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+.accordion__items {
+  max-width: 840px;
+  margin: 0 auto;
+}
+.accordion__item {
+  margin-bottom: 2.5rem;
+  border-radius: 5px;
+  box-shadow: 4px 4px 20px 4px rgba(0, 0, 0, 0.07);
+}
+/* Accordion Header */
+.accordion__item-header {
+  color: black;
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem 1rem 1rem;
+  min-height: 3.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.accordion__item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+.accordion__item-header.active::after {
+  content: "";
+  width: 10px;
+  height: 3px;
+  background-color: black;
+  padding-right: 1rem;
+}
+/* Accordion Body */
+.accordion__item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+.accordion__item-body-content {
+  padding: 1rem 2rem;
+  border-top: 2px solid;
+  border-image: linear-gradient(to right, transparent, #6854fc, transparent) 1;
+}
+
+@media (max-width: 769px) {
+  html {
+    font-size: 14px;
+  }
+}
