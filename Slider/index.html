@@ -4,12 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Slider</title>
 </head>
 
 <body>
 
+    <div class="slider">
+        <div class="container">
+            <!-- Slider Wrapper -->
+            <div class="slider__wrapper">
+                <div class="slider__frame">
+                    <!-- Individual Slider Items -->
+                    <div class="slider__item">
+                        <img class="slider__item-img" src="images/img1.jpg" alt="animals" />
+                        <p class="slider__item-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__item-img" src="images/img2.jpg" alt="animals" />
+                        <p class="slider__item-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__item-img" src="images/img3.jpg" alt="animals" />
+                        <p class="slider__item-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__item-img" src="images/img4.jpg" alt="animals" />
+                        <p class="slider__item-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__item-img" src="images/img5.jpg" alt="animals" />
+                        <p class="slider__item-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                    <div class="slider__item">
+                        <img class="slider__item-img" src="images/img6.jpg" alt="animals" />
+                        <p class="slider__item-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                </div>
+                <!-- Navigation Buttons -->
+                <div class="slider_nav-prev slider_nav"><i class="fa-solid fa-arrow-left"></i></div>
+                <div class="slider_nav-next slider_nav"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+        </div>
+        <!-- Pagination -->
+        <div class="slider__pagination">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>

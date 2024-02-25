@@ -6,15 +6,112 @@
   box-sizing: border-box;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .container {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.slider {
+  background: rgb(33, 122, 106);
+  background: linear-gradient(
+    90deg,
+    rgba(33, 122, 106, 1) 0%,
+    rgba(41, 157, 148, 1) 10%,
+    rgba(73, 187, 133, 1) 33%,
+    rgba(27, 142, 162, 1) 62%,
+    rgba(96, 173, 189, 1) 86%,
+    rgba(5, 146, 175, 1) 100%
+  );
+  padding: 50px 20px;
+}
+.slider .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Slider wrapper */
+.slider__wrapper {
+  position: relative;
+  max-width: 850px;
+  width: 100%;
+  height: 550px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.slider__frame {
+  display: flex;
+  height: 100%;
+  transition: all 1s ease;
+}
+
+/* Slider items */
+.slider__item {
+  position: relative;
+  flex: 0 0 100%;
+}
+.slider__item-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider__item-text {
+  max-width: 500px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+/* Slider navigation buttons */
+.slider_nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  background-color: #1a8563ed;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.slider_nav-prev {
+  left: 5%;
+}
+
+.slider_nav-next {
+  right: 5%;
+}
+
+/* Slider pagination */
+
+.slider__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.slider__pagination .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.slider__pagination .dot.active {
+  background-color: #257a5f;
 }
