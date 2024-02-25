@@ -1,3 +1,4 @@
+/* Reset defaults*/
 *,
 *::before,
 *::after {
@@ -6,14 +7,15 @@
   box-sizing: border-box;
 }
 
+/* Set container max width */
 .container {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
+/* Style the slider */
 .slider {
-  background: rgb(33, 122, 106);
   background: linear-gradient(
     90deg,
     rgba(33, 122, 106, 1) 0%,
@@ -25,13 +27,14 @@
   );
   padding: 50px 20px;
 }
+/* Center align the content within the slider */
 .slider .container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Slider wrapper */
+/* Style the slider wrapper */
 .slider__wrapper {
   position: relative;
   max-width: 850px;
@@ -43,10 +46,10 @@
 .slider__frame {
   display: flex;
   height: 100%;
-  transition: all 1s ease;
+  transition: all 0.8s ease;
 }
 
-/* Slider items */
+/* Style the slider items */
 .slider__item {
   position: relative;
   flex: 0 0 100%;
@@ -69,7 +72,7 @@
   text-align: center;
 }
 
-/* Slider navigation buttons */
+/* Style the slider navigation buttons */
 .slider_nav {
   position: absolute;
   top: 50%;
@@ -82,7 +85,7 @@
   font-size: 20px;
   color: white;
   cursor: pointer;
-  background-color: #1a8563ed;
+  background-color: #46a397;
   border: 2px solid white;
   border-radius: 50%;
 }
@@ -94,8 +97,7 @@
   right: 5%;
 }
 
-/* Slider pagination */
-
+/* Style the slider pagination */
 .slider__pagination {
   display: flex;
   justify-content: center;
@@ -104,6 +106,7 @@
   margin-top: 20px;
 }
 
+/* Style the pagination dots */
 .slider__pagination .dot {
   width: 12px;
   height: 12px;
@@ -112,6 +115,7 @@
   cursor: pointer;
 }
 
+/* Style the active pagination dot */
 .slider__pagination .dot.active {
-  background-color: #257a5f;
+  background-color: #d5efec;
 }
