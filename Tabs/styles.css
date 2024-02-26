@@ -1,4 +1,4 @@
-/* Reset defaults*/
+/* Reset default styles */
 *,
 *::before,
 *::after {
@@ -7,9 +7,95 @@
   box-sizing: border-box;
 }
 
-/* Set container max width */
-.container {
-  max-width: 1320px;
+body {
+  background-color: #2d2d2d;
+}
+
+/* Styling for tabs */
+.tabs {
+  padding: 50px 20px;
+}
+
+/* Styling for tabs wrapper */
+.tabs__wrapper {
+  max-width: 750px;
+  width: 100%;
+  background: #e3e9e6;
+  border-radius: 25px;
   margin: 0 auto;
-  padding: 0 15px;
+}
+
+/* Styling for tabs buttons */
+.tabs__btns {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tabs-btn:nth-child(1) {
+  border-top-left-radius: 25px;
+}
+
+.tabs-btn:nth-child(3) {
+  border-top-right-radius: 25px;
+}
+
+.tabs-btn {
+  padding: 1rem 0;
+  border: none;
+  text-transform: capitalize;
+  font-size: 1rem;
+  display: block;
+  background: #b5b8b7;
+  cursor: pointer;
+  transition: 0.3s;
+  letter-spacing: 3px;
+  color: #ffffff;
+}
+
+.tabs-btn.active {
+  background: #e3e9e6;
+  color: #000;
+}
+
+.tabs-btn:hover:not(.active) {
+  background: #cdcfce;
+  color: #000;
+}
+
+/* Styling for tabs body */
+.tabs__body {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 2rem 1.5rem;
+}
+
+.tabs__content {
+  display: none;
+}
+
+/* Styling for tabs content */
+.tabs__content-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+}
+
+.tabs__content-text {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.tabs__content-img {
+  display: block;
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.tabs__content.active {
+  display: block;
 }
