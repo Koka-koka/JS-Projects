@@ -98,4 +98,17 @@ body {
 
 .tabs__content.active {
   display: block;
+  animation: flashDown 0.7s ease-out;
+}
+
+/* Define keyframes for flashing downwards animation */
+@keyframes flashDown {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
