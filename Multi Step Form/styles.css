@@ -3,6 +3,7 @@
   --secondary-color: #e5e5e5;
   --light-color: #d4d3d3;
   --dark-color: #1b1b1b;
+  --btn-color: rgb(81, 83, 232);
   --font-small: 14px;
   --font-medium: 16px;
   --font-large: 20px;
@@ -76,6 +77,11 @@ a {
   flex-basis: 30%;
   height: 2px;
   background-color: var(--light-color);
+  transition: background-color 0.3s ease;
+}
+
+.separator.active {
+  background-color: var(--primary-color);
 }
 
 .progress__step > span {
@@ -87,13 +93,12 @@ a {
   align-items: center;
   border-radius: 50%;
   background-color: var(--light-color);
-  z-index: 1;
+  transition: background-color 0.3s ease;
 }
 
 .progress__step.active > span {
   color: #fff;
   background-color: var(--primary-color);
-  z-index: 1;
 }
 
 /* Form */
@@ -115,6 +120,18 @@ a {
 
 .form__step.active {
   display: block;
+  animation: fadeIn 0.5s cubic-bezier(0.35, 0.5, 0.65, 0.95) both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .form__title {
@@ -182,7 +199,7 @@ a {
   margin-top: 2em;
 }
 .btn {
-  background-color: var(--primary-color);
+  background-color: var(--btn-color);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -213,5 +230,5 @@ a {
 }
 
 .btn--submit {
-  display: none;
+  background-color: var(--primary-color);
 }
