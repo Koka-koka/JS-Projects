@@ -1,0 +1,274 @@
+/* Memory Game styles */
+
+/* Import Orbitron font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+/* Reset all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set HTML font-size to 62.5% */
+html {
+    font-size: 62.5%;
+}
+
+/**
+ * Set CSS variables for the game.
+ */
+:root {
+    --grid-cell: 6;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-light-gray: #555;
+    --color-gray: #222;
+    --color-blue: #119ec9;
+    --gap: 1rem;
+    --time: 0.5s;
+}
+
+/* Set body styles */
+body {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #e8f2fc;
+}
+
+/* Set container styles */
+.container {
+    height: 100svh;
+    display: grid;
+    place-items: center;
+}
+
+/**
+ * Set styles for the playground grid.
+ */
+.playground {
+    background-color: #f7eedd;
+    width: 90vmin;
+    height: 90vmin;
+    border-radius: var(--gap);
+    display: grid;
+    gap: var(--gap);
+    padding: var(--gap);
+}
+
+/**
+ * Set styles for a single card.
+ */
+.card {
+    background-color: var(--color-white);
+    box-shadow: 0 0 .3rem #eee;
+    display: grid;
+    place-items: center;
+    border-radius: var(--gap);
+    cursor: pointer;
+    perspective: 100rem;
+    transform: rotateY(180deg);
+    transition: transform var(--time) var(--time) linear;
+}
+
+/* Set styles for the card */
+.card {
+    background-color: var(--color-white);
+    box-shadow: 0 0 .3rem #eee;
+    display: grid;
+    place-items: center;
+    border-radius: var(--gap);
+    cursor: pointer;
+    perspective: 100rem;
+    transform: rotateY(180deg);
+    transition: transform var(--time) var(--time) linear;
+}
+/**
+ * Set active style for the card.
+ */
+.card.active {
+    pointer-events: none;
+    transform: rotateY(0deg);
+    transition: transform var(--time) linear;
+}
+/**
+ * Set styles for the card image.
+ */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    background-color: var(--color-white);
+    border-radius: var(--gap);
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transition: transform var(--time) var(--time) linear;
+    backface-visibility: hidden;
+}
+/**
+ * Set active style for the card image.
+ */
+.card.active img{
+    transform: rotateY(0deg);
+    transition: transform var(--time) linear;
+}
+/**
+ * Set styles for the card when it is paused.
+ */
+.card.pause {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+/**
+ * Set styles for the card when it is stopped.
+ */
+.card.stop {
+    pointer-events: none;
+}
+/**
+ * Set styles for the modal window.
+ */
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(119, 118, 115, 0.684);
+    display: grid;
+    place-items: center;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--time) 1s;
+}
+/**
+ * Set styles for the modal content.
+ */
+.modal__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap);
+    width: 40rem;
+    aspect-ratio: 1 / 1;
+    background-color: var(--color-white);
+    border-radius: var(--gap);
+}
+/**
+ * Set styles for the modal heading.
+ */
+.modal__heading {
+    font-size: 4rem;
+    color: var(--color-light-gray);
+    margin-bottom: var(--gap);
+}
+/**
+ * Set styles for the modal time.
+ */
+.modal__time {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+}
+/**
+ * Set styles for the modal time label.
+ */
+.modal__time-label {
+    font-size: 1.8rem;
+    color: var(--color-gray);
+}
+/**
+ * Set styles for the modal text.
+ */
+.modal__text {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--color-light-gray);
+    font-weight: 500;
+}
+/**
+ * Set styles for the wrong class.
+ */
+.wrong {
+    display: inline-block;
+    margin: 0.5rem;
+    font-size: 2.5rem;
+    color: rgb(222, 27, 27);
+}
+/**
+ * Set styles for the button.
+ */
+.btn {
+    box-sizing: content-box;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+/**
+ * Set styles for the yes button.
+ */
+.yes-btn, .cancel-btn {
+    margin-inline-start: 0.5rem;
+    width: 7rem;
+}
+/**
+ * Set styles for the features container.
+ */
+.features {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+}
+/**
+ * Set styles for the timer.
+ */
+.timer {
+    font-size: 1.3rem;
+    color: var(--color-blue);
+}
+/**
+ * Set styles for the timer span.
+ */
+.timer span {
+    font-size: 1.6rem;
+    width: 2.7rem;
+}
+/**
+ * Set styles for the timer last span.
+ */
+.timer span:last-child {
+    margin-left: 0.5rem;
+}
+/**
+ * Set styles for the restart button.
+ */
+.restart-btn {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/**
+ * Set styles for the media queries.
+ */
+@media (max-width: 600px) {
+    :root {
+        --gap: 0.5rem;
+    }
+    .playground {
+        width: 95vmin;
+        height: 95vmin;
+    }
+    .modal__content {
+        width: 30rem;
+        text-align: center;
+    }
+}
+

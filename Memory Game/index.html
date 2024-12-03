@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="js/main.js" defer type="module"></script>
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <!-- Memory Game -->
+    <div class="container">
+      <!-- Select number of cells -->
+      <form>
+        <select name="choice" id="" class="select-cells-number">
+          <option value="16" selected>16</option>
+          <option value="36">36</option>
+          <option value="64">64</option>
+        </select>
+      </form>
+      <!-- Playground -->
+      <div class="playground"></div>
+      <!-- Modal -->
+      <div class="modal">
+        <div class="modal__content">
+          <h2 class="modal__heading">Game Over</h2>
+          <div class="modal__time">
+            <span class="modal__time-label">Time Spent:</span>
+          </div>
+          <h3 class="modal__text">
+            Wrong Attempts: <span class="wrong">5</span>
+          </h3>
+          <button class="btn modal__btn">Play Again</button>
+        </div>
+      </div>
+      <!-- Features -->
+      <div class="features">
+        <div class="timer"><span>00</span>min <span>00</span>sec</div>
+        <button class="btn restart-btn">New Game</button>
+      </div>
+    </div>
+  </body>
+</html>
