@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+svg {
+  width: 600px;
+  height: 200px;
+  filter: url(#wavy);
+}
