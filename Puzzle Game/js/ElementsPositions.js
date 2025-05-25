@@ -1,4 +1,4 @@
-import Elements from "./elements.js";
+import Elements from "./Elements.js";
 
 class ElementsPositions {
   /**

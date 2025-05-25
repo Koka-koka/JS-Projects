@@ -1,6 +1,12 @@
 import ElementsPositions from "./ElementsPositions.js";
 
 class DragDrop {
+  /**
+   * Initializes a new instance of the DragDrop class.
+   * Sets up the elements positions, selected item, and points.
+   * Also sets up drag and drop events and image change functionality.
+   */
+
   constructor() {
     this.elementsPositions = new ElementsPositions();
     this.selected = null;
@@ -13,6 +19,14 @@ class DragDrop {
     this.changeImage();
   }
 
+  /**
+   * Sets up the drag and drop events for the puzzle items and cells.
+   * When an item is dragged and dropped into a cell, the item is appended to the cell.
+   * If the item is in the correct position, the points are incremented.
+   * If the item is in the wrong position, the points are decremented.
+   * Checks if the game is over and displays the modal with the final score.
+   * @param {Event} e - The event object.
+   */
   dragDropEvents() {
     const {
       cells,
@@ -89,11 +103,20 @@ class DragDrop {
     });
   }
 
+  /**
+   * Sets up event listeners for changing the puzzle image.
+   * The function allows users to change the puzzle image either by clicking
+   * the "Get Random Image" button, which fetches a random image from the web,
+   * or by uploading an image file via an input file element.
+   * Updates the background image of the puzzle and all draggable items.
+   * Resets the points to zero when a new image is uploaded.
+   */
+
   changeImage() {
     const { puzzleImg, inputFile, dragableItems, randomImgBtn } =
       this.elementsPositions.elements;
 
-    randomImgBtn.addEventListener("click", (e) => {
+    randomImgBtn.addEventListener("click", () => {
       loader.style.display = "flex";
 
       fetch("https://picsum.photos/1920/1080?random")
@@ -113,7 +136,7 @@ class DragDrop {
         });
     });
 
-    inputFile.addEventListener("change", (e) => {
+    inputFile.addEventListener("change", () => {
       const imgUrl = URL.createObjectURL(inputFile.files[0]);
 
       puzzleImg.style.backgroundImage = `url(${imgUrl})`;
